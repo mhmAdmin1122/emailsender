@@ -1,22 +1,99 @@
 <html>
   <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
       /* Add any additional CSS styles here */
+      .message-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .message-body {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background: rgb(243, 244, 246);
+        padding: 40px 20px;
+        border-radius: 8px;
+      }
+      .logoBox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .logoPic {
+        width: 90px;
+        height: 60px;
+      }
+      .logoNameBox {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 16px;
+      }
+      .logoNameBox h1 {
+        font-weight: 700;
+        font-size: 30px;
+        color: #000;
+      }
+      .logoNameBox p {
+        font-weight: 400;
+        font-size: 20px;
+        color: rgb(156, 163, 175);
+      }
+      .otpmessage-box {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .otpmessage-box h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: rgb(107, 114, 128);
+      }
+      .otpmessage-box h4 {
+        font-size: 24px;
+        font-weight: 500;
+        color: rgb(156, 163, 175);
+      }
+      .otpmessage-box p {
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(75, 85, 99);
+      }
     </style>
   </head>
   <body>
-    <img
-      src="https://www.risemarketing.shop/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b506e232.png&w=256&q=75"
-      alt="Logo"
-      class="h-16 w-auto mb-4"
-    />
-    <p class="font-bold">Hello {{recipientName}},</p>
-    <p>{{message}}</p>
-    <p>Best regards,</p>
-    <p>Your Name</p>
+    <div class="message-box">
+      <div class="message-body">
+        <div class="logoBox">
+          <image
+            src="https://www.risemarketing.shop/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b506e232.png&w=256&q=75"
+            alt="logo-pic"
+            class="logoPic"
+          />
+          <div class="logoNameBox">
+            <h1>Rise Marketing</h1>
+            <p>A New Way of Digital World!</p>
+          </div>
+        </div>
+
+        <div class="otpmessage-box">
+          <h1>Your OTP is</h1>
+          <h4>{{message}}</h4>
+          <p>
+            This OTP is to verify your identity. Do not share this with anyone.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
